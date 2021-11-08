@@ -1,0 +1,24 @@
+/* Footer */
+
+.footer {
+    position: absolute;
+    width: 100%;
+    background-color: #0094d9;
+    color: white;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-img {
+    float: left;
+    width: 45%;
+    margin-left: 5%;
+}
+
+.footer-copyright {
+    text-align: right;
+    float: left;
+    width: 45%;
+    margin-right: 5%;
+}

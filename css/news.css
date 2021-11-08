@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto, "Roboto";
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+
+/*Header*/
+
+#header {
+    text-align: center;
+}
+
+#header h1 {
+    font-size: 400%;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+
+/*News*/
+
+.news {
+    text-align: center;
+}
+
+.container {
+    margin-top: 50px;
+    display: inline-block;
+    width: 400px;
+    transition: 0.5s;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.container:hover {
+    box-shadow: 5px 5px 10px #0094d9;
+    transition: 0.5s;
+}
+
+.news-img {
+    width: 100%;
+    background-color: #0094d9;
+    text-align: center;
+}
+
+.img-container {
+    transition: 0.5s;
+    width: 360px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.img-container:hover {
+    transition: 0.5s;
+    width: 360px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#img-title-news {
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    text-align: left;
+    text-indent: 20px;
+}
