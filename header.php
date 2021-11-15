@@ -15,8 +15,8 @@
             <li><a href="index.php">Domov</a></li>
             <li><a href="news.php">Novice</a></li>
             <li><a href="rules.php">Pravila</a></li>
-            <li><a href="#">O Nas</a></li>
-            <li><a href="#">Prijava</a></li>
+            <li><a href="about.php">O Nas</a></li>
+            <li><a href="competition.php">Tekmovanje</a></li>
         </ul>
     </div>
     <nav role="navigation">
@@ -29,8 +29,8 @@
                 <li><a href="index.php">Domov</a></li>
                 <li><a href="news.php">Novice</a></li>
                 <li><a href="rules.php">Pravila</a></li>
-                <li><a href="#">O Nas</a></li>
-                <li><a href="#">Prijava</a></li>
+                <li><a href="about.php">O Nas</a></li>
+                <li><a href="competition.php">Tekmovanje</a></li>
             </ul>
         </div>
     </nav>
