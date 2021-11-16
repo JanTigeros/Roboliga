@@ -24,19 +24,19 @@
             </div>
         </div>
         <div class="row1-container">
-            <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='login.php'">
+            <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='#'">
                 <h2>Ekipe</h2>
                 <p>Tukaj si lahko ogledate vse prijavljenje ekipe :)</p>
                 <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
             </div>
 
-            <div class="box red" style="cursor: pointer;" onclick="window.location='login.php'">
+            <div class="box red" style="cursor: pointer;" onclick="window.location='register.php'">
                 <h2>Prijava</h2>
                 <p>Tukaj se lahko prijavite na tekmovanje Roboliga</p>
                 <img id="ico" src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
             </div>
 
-            <div class="box box-down blue" style="cursor: pointer;" onclick="window.location='login.php'">
+            <div class="box box-down blue" style="cursor: pointer;" onclick="window.location='#'">
                 <h2>Rezultati</h2>
                 <p>Uses data from past projects to provide better delivery estimates</p>
                 <img id="ico" src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
