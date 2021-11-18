@@ -1,6 +1,6 @@
 ﻿/*
 Created: 16. 11. 2021
-Modified: 16. 11. 2021
+Modified: 18. 11. 2021
 Model: MySQL 8.0
 Database: MySQL 8.0
 */
@@ -15,6 +15,13 @@ CREATE TABLE `teams`
   `t_name` Char(100),
   `school_id` Int,
   `category_id` Int,
+  `u1` Char(255),
+  `u2` Char(255),
+  `u3` Char(255),
+  `u4` Char(255),
+  `u5` Char(255),
+  `m1` Char(255),
+  `m2` Char(255),
   PRIMARY KEY (`id`),
   UNIQUE `id` (`id`)
 )
@@ -37,9 +44,9 @@ CREATE TABLE `users`
 )
 ;
 
--- Table categorys
+-- Table categories
 
-CREATE TABLE `categorys`
+CREATE TABLE `categories`
 (
   `id` Int NOT NULL AUTO_INCREMENT,
   `title` Char(100) NOT NULL,
@@ -110,7 +117,7 @@ CREATE INDEX `IX_Relationship4` ON `teams-mentors` (`mentor_id`)
 ALTER TABLE `teams` ADD CONSTRAINT `Relationship1` FOREIGN KEY (`school_id`) REFERENCES `schools` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ;
 
-ALTER TABLE `teams` ADD CONSTRAINT `Relationship2` FOREIGN KEY (`category_id`) REFERENCES `categorys` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+ALTER TABLE `teams` ADD CONSTRAINT `Relationship2` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ;
 
 ALTER TABLE `teams-mentors` ADD CONSTRAINT `Relationship3` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
