@@ -1,104 +1,153 @@
 <?php
 session_start();
-require_once('db.php');
- 
-if(isset($_POST['submit']))
+require("db.php");
+
+if(isset($_POST['iekipe']))
 {
-    if(isset($_POST['first_name'],$_POST['last_name'],$_POST['email'],$_POST['password']) && !empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password']))
+    echo 'Neki štima';
+    if(isset($_POST['name2'])){
+        $_POST['name2'] = ' ';
+    }
+    if(isset($_POST['name3'])){
+        $_POST['name3'] = ' ';
+    }
+    if(isset($_POST['name4'])){
+        $_POST['name4'] = ' ';
+    }
+    if(isset($_POST['name5'])){
+        $_POST['name5'] = ' ';
+    }
+    if(isset($_POST['m2'])){
+        $_POST[''] = ' ';
+    }
+    if(isset($_POST['iekipe'],$_POST['name1'],$_POST['m1']) && !empty($_POST['iekipe']) && !empty($_POST['name1']) && !empty($_POST['m1']))
     {
-        $firstName = trim($_POST['first_name']);
-        $lastName = trim($_POST['last_name']);
-        $email = trim($_POST['email']);
-        $password = trim($_POST['password']);
-        
-        $options = array("cost"=>4);
-        $hashPassword = password_hash($password,PASSWORD_BCRYPT,$options);
-        $date = date('Y-m-d H:i:s');
- 
-        if(filter_var($email, FILTER_VALIDATE_EMAIL))
-		{
-            $sql = 'select * from members where email = :email';
-            $stmt = $pdo->prepare($sql);
-            $p = ['email'=>$email];
-            $stmt->execute($p);
-            
-            if($stmt->rowCount() == 0)
-            {
-                $sql = "insert into members (first_name, last_name, email, `password`, created_at,updated_at) values(:fname,:lname,:email,:pass,:created_at,:updated_at)";
-            
-                try{
-                    $handle = $pdo->prepare($sql);
-                    $params = [
-                        ':fname'=>$firstName,
-                        ':lname'=>$lastName,
-                        ':email'=>$email,
-                        ':pass'=>$hashPassword,
-                        ':created_at'=>$date,
-                        ':updated_at'=>$date
-                    ];
-                    
-                    $handle->execute($params);
-                    
-                    $success = 'User has been created successfully';
-                    
-                }
-                catch(PDOException $e){
-                    $errors[] = $e->getMessage();
-                }
-            }
-            else
-            {
-                $valFirstName = $firstName;
-                $valLastName = $lastName;
-                $valEmail = '';
-                $valPassword = $password;
- 
-                $errors[] = 'Email address already registered';
-            }
+        $team = ($_POST['iekipe']);
+        $name1 = ($_POST['name1']);
+        $name2 = ($_POST['name2']);
+        $name3 = ($_POST['name3']);
+        $name4 = ($_POST['name4']);
+        $name5 = ($_POST['name5']);
+        $category = ($_POST['cat']);
+        $school = ($_POST['sola']);
+        $mentor1 = ($_POST['m1']);
+        $mentor2 = ($_POST['m2']);
+
+        $sql2 = 'SELECT id FROM categories WHERE title = ?';
+        $stmt2 = $pdo->prepare('SELECT id FROM categories WHERE title = ?');
+        $stmt2->execute([$team]);
+        $c_id = $stmt2->fetch();
+
+        $sql3 = 'SELECT id FROM schools WHERE sname = ?';
+        $stmt3 = $pdo->prepare('SELECT id FROM schools WHERE sname = ?');
+        $stmt3->execute($school);
+        $s_id = $stmt3->fetch();
+
+        $pdo->prepare("INSERT INTO teams VALUES (NULL,?,?,?,?,?,?,?,?,?,?)")->execute($data);
+        /* INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) 
+        VALUES( 'Ekipa', 1, 1, 'Jan Sajtl', '', '', '', '', 'Mirko Hočevar', '');
+        $sql = "INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) VALUES( ':team', :school, :cat, ':u1', ':u2', ':u3', ':u4', ':u5', ':m1', ':m2')"; */
+        echo $stmt3;
+        echo $stmt2;
+        echo 'ne dela';
+        /*  else
+        {
+            $valFirstName = $firstName;
+            $valLastName = $lastName;
+            $valEmail = '';
+            $valPassword = $password;
+
+            $errors[] = 'Email address already registered';
         }
         else
         {
             $errors[] = "Email address is not valid";
+        } */
+    }
+    else
+    {
+        echo 'jebi ga';
+
+        if(!isset($_POST['iekipe']) || empty($_POST['iekipe']))
+        {
+            $errors[] = 'Potrebujete ime ekipe';
+        }
+        if(!isset($_POST['name1']) || empty($_POST['name1']))
+        {
+            $errors[] = 'Potrebujete vsaj enega člana';
+        }
+ 
+        if(!isset($_POST['m1']) || empty($_POST['m1']))
+        {
+            $errors[] = 'Potrebujete vsaj enega mentorja';
+        }     
+    }
+}
+echo 'nope'
+/*
+if(isset($_POST['submit']))
+{
+    if(isset($_POST['iekipe'],$_POST['name1'],$_POST['m1') && !empty($_POST['iekipe']) && !empty($_POST['name1']) && !empty($_POST['m1']))
+    {
+        $team = trim($_POST['iekipe']);
+        $name1 = trim($_POST['name1']);
+        $name2 = trim($_POST['name2']);
+        $name3 = trim($_POST['name3']);
+        $name4 = trim($_POST['name4']);
+        $name5 = trim($_POST['name5']);
+        $category = trim($_POST['cat']);
+        $school = trim($_POST['sola']);
+        $mentor1 = trim($_POST['m1']);
+        $mentor2 = trim($_POST['m2']);
+
+            
+        if($stmt->rowCount() == 0)
+        {
+            $stmt = $pdo->prepare('SELECT id FROM categories WHERE title = :title');
+            $stmt->execute(['title' => $category]);
+            $cat = $stmt->fetch();
+            $c_id = $pdo->query("SELECT id FROM categories WHERE title = '.$category.'");
+            $s_id = "SELECT id FROM schools WHERE s.name = '.$school.'";
+            $sql = 'INSERT into teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2,) values( '.$team.', '.$s_id.', '.$cat.', '.$name1.', '.$name2.', '.$name3.', '.$name4.', '.$name5.', '.$mentor1.', '.$mentor2.')';
+        }
+        else
+        {
+            $valteam = $team;
+            $valname1 = $name1;
+            $valmentor = $mentor1;
+
+            $errors[] = 'Ekipa je že prijavljena';
         }
     }
     else
     {
-        if(!isset($_POST['first_name']) || empty($_POST['first_name']))
+        if(!isset($_POST['iekipe']) || empty($_POST['iekipe']))
         {
-            $errors[] = 'First name is required';
+            $errors[] = 'Potrebujete ime ekipe';
         }
         else
         {
-            $valFirstName = $_POST['first_name'];
+            $valteam = $_POST['iekipe'];
         }
-        if(!isset($_POST['last_name']) || empty($_POST['last_name']))
+        if(!isset($_POST['name1']) || empty($_POST['name1']))
         {
-            $errors[] = 'Last name is required';
+            $errors[] = 'Potrebujete vsaj enega člana';
         }
         else
         {
-            $valLastName = $_POST['last_name'];
+            $valname1 = $_POST['name1'];
         }
  
-        if(!isset($_POST['email']) || empty($_POST['email']))
+        if(!isset($_POST['m1']) || empty($_POST['m1']))
         {
-            $errors[] = 'Email is required';
+            $errors[] = 'Potrebujete vsaj enega mentorja';
         }
         else
         {
-            $valEmail = $_POST['email'];
-        }
- 
-        if(!isset($_POST['password']) || empty($_POST['password']))
-        {
-            $errors[] = 'Password is required';
-        }
-        else
-        {
-            $valPassword = $_POST['password'];
+            $valmentor = $_POST['m1'];
         }
         
     }
  
-}
+} */
 ?>

@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+require("db.php");
+session_start();
+?>
 <html lang="sl">
 <head>
     <meta charset="UTF-8">
@@ -10,60 +14,66 @@
 <body>
     <div class="login-container">
         <div class="form-box">
-            <form id="login-form" action="" method="post">
+            <form id="login-form" action="register-proccess.php" method="post">
                 <h1>Prijavi Ekipo</h1>
                 <div class="team-input">
                     <div class="input-container">
-                        <input type="text" name="iekipa" required>
-                        <label>Ime Ekipe</label>
+                        <input type="text" name="iekipe" required>
+                        <label id="input">Ime Ekipe</label>
                     </div>
                 </div>
                 <div class="name-input">
-                    <div class="input-container">
-                            <input type="text" name="iekipa" required>
-                            <label>Ime in Priimek Člana</label>
+                    <div class="input-container" id="input">
+                            <input type="text" name="name1" required>
+                            <label id="input">Ime in Priimek Člana</label>
                         </div>
                         <div class="input-container">
-                            <input type="text" name="iekipa" required="false">
-                            <label>Ime in Priimek Člana 2</label>
+                            <input type="text" name="name2">
+                            <label id="input">Ime in Priimek Člana 2</label>
                         </div>
                         <div class="input-container">
-                            <input type="text" name="iekipa" required="false">
-                            <label>Ime in Priimek Člana 3</label>
+                            <input type="text" name="name3">
+                            <label id="input">Ime in Priimek Člana 3</label>
                         </div>
                         <div class="input-container">
-                            <input type="text" name="iekipa" required="false">
-                            <label>Ime in Priimek Člana 4</label>
+                            <input type="text" name="name4">
+                            <label id="input">Ime in Priimek Člana 4</label>
                         </div>
                         <div class="input-container">
-                            <input type="text" name="iekipa" required="false">
-                            <label>Ime in Priimek Člana 5</label>
+                            <input type="text" name="name5">
+                            <label id="input">Ime in Priimek Člana 5</label>
                         </div>
                 </div>
                 <div class="select-input">
-                    <select>
-                        <option value="#" selected="true" disabled="true" hidden>Izberite Kategorijo</option>
-                        <option value="actual value 1">Kategorija 1</option>
-                        <option value="actual value 2">Kategorija 2</option>
-                        <option value="actual value 3">Kategorija 3</option>
-                    </select>
+                    <?php
+                    $stmt = $pdo->query('SELECT * FROM categories');
+                    echo '<select name="cat">';
+                    while ($row = $stmt->fetch()){
+                        echo '<option value="" selected="true" disabled="true" hidden>Izberite Kategorijo</option>
+                        <option value="'.$row['title'].'">'.$row['title'].'</option>';
+                    }
+                    echo '</select>';
+                    ?>
                 </div>
                 <div class="select-input">
-                    <select>
-                        <option value="#" selected="true" disabled="true" hidden>Vaša šola</option>
-                        <option value="actual value 1">Šola 1</option>
-                        <option value="actual value 2">Šola 2</option>
-                        <option value="actual value 3">Šola 3</option>
-                    </select>
+                    <?php
+                    $stmt2 = $pdo->query('SELECT * FROM schools');
+                    echo '<select name="sola">';
+                    while ($row2 = $stmt2->fetch()){
+                        echo '<option value="" selected="true" disabled="true" hidden>Vaša šola</option>
+                        <option value="'.$row2['sname'].'">'.$row2['sname'].'</option>';
+                    }
+                    echo '</select>';
+                    ?>
                 </div>
                 <div class="name-input">
                     <div class="input-container">
-                        <input type="text" name="iekipa" required>
-                        <label>Ime in Priimek Menotrja</label>
+                        <input type="text" name="m1" required>
+                        <label id="input">Ime in Priimek Menotrja</label>
                     </div>
                     <div class="input-container">
-                        <input type="text" name="iekipa" required>
-                        <label>Ime in Priimek Menotrja 2</label>
+                        <input type="text" name="m2">
+                        <label id="input">Ime in Priimek Menotrja 2</label>
                     </div>
                 </div>
                 <div class="btn-div">
