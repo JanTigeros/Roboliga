@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+body {
+    font-family: roboto, "Roboto";
+}
+
+
 /* Menu */
 
 .menu {
-    height: 30%;
     margin: 0px;
     padding: 5px;
     background-color: #0094d9;
@@ -47,13 +52,13 @@
 
 /* Phone Menu */
 
-@media (min-width: 940px) {
+@media (min-width: 1070px) {
     nav {
         display: none;
     }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1070px) {
     .menu {
         display: none;
     }

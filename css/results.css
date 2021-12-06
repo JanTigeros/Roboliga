@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto, "Roboto";
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+.page {
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto, "Roboto";
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+
+/* Table */
+
 h1 {
     font-weight: 400;
 }
@@ -19,17 +39,23 @@ p {
     overflow: auto;
 }
 
+[data-table_id="0"] {
+    background-color: white;
+    color: black;
+}
+
 [data-table_id="1"] {
-    background-color: rgb(255, 115, 0);
+    background-color: #FFD700;
+    color: black;
 }
 
 [data-table_id="2"] {
-    background-color: rgb(61, 53, 39);
-    color: rgb(220, 220, 220);
+    background-color: #C0C0C0;
+    color: black;
 }
 
 [data-table_id="3"] {
-    background-color: rgba(168, 189, 4, .8);
+    background-color: #CD7F32;
 }
 
 ._rank {
@@ -64,9 +90,11 @@ pre {
 /** Sticky table styles **/
 
 .st_viewport {
-    background-color: rgb(62, 148, 236);
+    font-family: roboto, "Roboto";
     color: rgb(27, 30, 36);
     margin: 20px 0;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 

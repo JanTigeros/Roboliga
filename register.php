@@ -46,9 +46,12 @@ session_start();
                 </div>
                 <div class="select-input">
                     <?php
-                    $stmt = $pdo->query('SELECT * FROM categories');
+                    //$stmt = $pdo->query('SELECT * FROM categories');
+                    $sql = "SELECT * FROM categories";
                     echo '<select name="cat">';
-                    while ($row = $stmt->fetch()){
+                    $result=mysqli_query($conn, $sql); 
+                    while ($row= mysqli_fetch_array($result)){
+                    //while ($row = $stmt->fetch()){
                         echo '<option value="" selected="true" disabled="true" hidden>Izberite Kategorijo</option>
                         <option value="'.$row['title'].'">'.$row['title'].'</option>';
                     }
@@ -57,9 +60,12 @@ session_start();
                 </div>
                 <div class="select-input">
                     <?php
-                    $stmt2 = $pdo->query('SELECT * FROM schools');
+                    //$stmt2 = $pdo->query('SELECT * FROM schools');
+                    $sql2 = "SELECT * FROM schools";
                     echo '<select name="sola">';
-                    while ($row2 = $stmt2->fetch()){
+                    $result2=mysqli_query($conn, $sql2); 
+                    while ($row2= mysqli_fetch_array($result2)){
+                    // while ($row2 = $stmt2->fetch()){
                         echo '<option value="" selected="true" disabled="true" hidden>Vaša šola</option>
                         <option value="'.$row2['sname'].'">'.$row2['sname'].'</option>';
                     }

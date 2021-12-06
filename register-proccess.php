@@ -23,33 +23,38 @@ if(isset($_POST['iekipe']))
     if(isset($_POST['iekipe'],$_POST['name1'],$_POST['m1']) && !empty($_POST['iekipe']) && !empty($_POST['name1']) && !empty($_POST['m1']))
     {
         $team = ($_POST['iekipe']);
-        $name1 = ($_POST['name1']);
-        $name2 = ($_POST['name2']);
-        $name3 = ($_POST['name3']);
-        $name4 = ($_POST['name4']);
-        $name5 = ($_POST['name5']);
+        $u1 = $conn -> real_escape_string($_POST['name1']);
+        $u2 = $conn -> real_escape_string($_POST['name2']);
+        $u3 = $conn -> real_escape_string($_POST['name3']);
+        $u4 = $conn -> real_escape_string($_POST['name4']);
+        $u5 = $conn -> real_escape_string($_POST['name5']);
         $category = ($_POST['cat']);
         $school = ($_POST['sola']);
-        $mentor1 = ($_POST['m1']);
-        $mentor2 = ($_POST['m2']);
+        $m1 = $conn -> real_escape_string($_POST['m1']);
+        $m2 = $conn -> real_escape_string($_POST['m2']);
 
-        $sql2 = 'SELECT id FROM categories WHERE title = ?';
-        $stmt2 = $pdo->prepare('SELECT id FROM categories WHERE title = ?');
-        $stmt2->execute([$team]);
-        $c_id = $stmt2->fetch();
+        $sql2 = "SELECT id FROM categories WHERE title = '$category'";
+        $query2= mysqli_query($conn, $sql2);
+        $result2 = mysqli_fetch_array($query2);
+        $c_id = $result2['id'];
 
-        $sql3 = 'SELECT id FROM schools WHERE sname = ?';
-        $stmt3 = $pdo->prepare('SELECT id FROM schools WHERE sname = ?');
-        $stmt3->execute($school);
-        $s_id = $stmt3->fetch();
+        $sql3 = "SELECT id FROM schools WHERE sname = '$school'";
+        $query3 = mysqli_query($conn, $sql2);
+        $result3 = mysqli_fetch_array($query3);
+        $s_id = $result3['id'];
 
-        $pdo->prepare("INSERT INTO teams VALUES (NULL,?,?,?,?,?,?,?,?,?,?)")->execute($data);
-        /* INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) 
-        VALUES( 'Ekipa', 1, 1, 'Jan Sajtl', '', '', '', '', 'Mirko Hočevar', '');
-        $sql = "INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) VALUES( ':team', :school, :cat, ':u1', ':u2', ':u3', ':u4', ':u5', ':m1', ':m2')"; */
-        echo $stmt3;
-        echo $stmt2;
-        echo 'ne dela';
+        // $pdo->prepare("INSERT INTO teams VALUES (NULL,?,?,?,?,?,?,?,?,?,?)")->execute($data);
+ /*        INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) 
+        VALUES( 'Ekipa', 1, 1, 'Jan Sajtl', '', '', '', '', 'Mirko Hočevar', ''); */
+        $sql = "INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) VALUES( '$team', $c_id, $s_id, '$u1', '$u2', '$u3', '$u4', '$u5', '$m1', '$m2')";
+        $result4 = mysqli_query($conn, $sql);
+           if ($result4) {
+           	 header("Location: index.php");
+	         exit();
+           }else {
+	           	header("register.php");
+		        exit();
+           }
         /*  else
         {
             $valFirstName = $firstName;

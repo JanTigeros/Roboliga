@@ -36,7 +36,7 @@
                 <img id="ico" src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
             </div>
 
-            <div class="box box-down blue" style="cursor: pointer;" onclick="window.location='results.html'">
+            <div class="box box-down blue" style="cursor: pointer;" onclick="window.location='results.php'">
                 <h2>Rezultati</h2>
                 <p>Uses data from past projects to provide better delivery estimates</p>
                 <img id="ico" src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">

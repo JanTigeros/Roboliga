@@ -14,58 +14,134 @@
     <div id="header">
         <h1>Novice</h1>
     </div>
-    <div class="news">
-        <div class="container">
-            <div class="news-img">
-                <div class="img-container">
-                    <img id="img-title-news" src="images/csgo_wp.jpg">
+    <main>
+        <div class="card">
+            <div class="card-header">
+            <img src="images/csgo_wp.jpg" alt="rover" />
+            </div>
+            <div class="card-body">
+            <span class="tag tag-teal">Technology</span>
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                <div class="user-info">
+                    <h5>July Dec</h5>
                 </div>
             </div>
-            <div class="text-container">
-                <h1>Naslov</h1>
-                <p>Kratek opis</p>
-            </div>
         </div>
-        <div class="container">
-            <div class="news-img">
-                <div class="img-container">
-                    <img id="img-title-news" src="images/csgo_wp.jpg">
+        <div class="card">
+            <div class="card-header">
+            <img src="images/csgo_wp.jpg" alt="rover" />
+            </div>
+            <div class="card-body">
+            <span class="tag tag-teal">Technology</span>
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                <div class="user-info">
+                    <h5>July Dec</h5>
                 </div>
             </div>
-            <div class="text-container">
-                <h1>Naslov</h1>
-                <p>Kratek opis</p>
-            </div>
         </div>
-        <div class="container">
-            <div class="news-img">
-                <div class="img-container">
-                    <img id="img-title-news" src="images/csgo_wp.jpg">
+        <div class="card">
+            <div class="card-header">
+            <img src="images/csgo_wp.jpg" alt="rover" />
+            </div>
+            <div class="card-body">
+            <span class="tag tag-teal">Technology</span>
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                <div class="user-info">
+                    <h5>July Dec</h5>
                 </div>
             </div>
-            <div class="text-container">
-                <h1>Naslov</h1>
-                <p>Kratek opis</p>
+        </div>
+        <div class="card">
+            <div class="card-header">
+            <img src="images/csgo_wp.jpg" alt="rover" />
+            </div>
+            <div class="card-body">
+            <span class="tag tag-teal">Technology</span>
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                <div class="user-info">
+                    <h5>July Dec</h5>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="news">
-        <div class="container">
-            <div class="text-container">
-                <h1>Naslov</h1>
+        <div class="card">
+            <div class="card-header">
+            <img src="images/csgo_wp.jpg" alt="rover" />
+            </div>
+            <div class="card-body">
+            <span class="tag tag-teal">Technology</span>
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                <div class="user-info">
+                    <h5>July Dec</h5>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <div class="text-container">
-                <h1>Naslov</h1>
+        <div class="card">
+            <div class="card-header">
+            <img src="images/csgo_wp.jpg" alt="rover" />
+            </div>
+            <div class="card-body">
+            <span class="tag tag-teal">Technology</span>
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                <div class="user-info">
+                    <h5>July Dec</h5>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <div class="text-container">
-                <h1>Naslov</h1>
+        <div class="card">
+            <div class="card-header">
+            <img src="images/csgo_wp.jpg" alt="rover" />
+            </div>
+            <div class="card-body">
+            <span class="tag tag-teal">Technology</span>
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                <div class="user-info">
+                    <h5>July Dec</h5>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
     <?php include "footer.php"; ?>
 
 </body>
