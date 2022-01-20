@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+require("db.php");
+session_start();
+?>
 <html>
 
 <head>
@@ -15,24 +19,30 @@
         <h1>Novice</h1>
     </div>
     <main>
-        <div class="card">
-            <div class="card-header">
-            <img src="images/csgo_wp.jpg" alt="rover" />
+        <?php 
+        $sql = "SELECT * FROM news";
+        $result=mysqli_query($conn, $sql); 
+        while ($row= mysqli_fetch_array($result)){ ?>
+        <a href="news-post.php?p_name=$row['title']."><div class="card" style="cursor: pointer;" onclick="window.location='news-post.php?p_name='.$row['title'].'">
+        <?php
+            echo '<div class="card-header">
+            <img src="'.$row['img'].'" alt="rover" />
             </div>
             <div class="card-body">
             <span class="tag tag-teal">Technology</span>
                 <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
+                    '.$row['title'].'
                 </h4>
                 <p>
-                    An exploration into the truck's polarising design
+                    '.$row['subtitle'].'
                 </p>
                 <div class="user-info">
-                    <h5>July Dec</h5>
+                    <h5>'.$row['date'].'</h5>
                 </div>
             </div>
-        </div>
+        </div></a>';
+                        }
+        ?>
         <div class="card">
             <div class="card-header">
             <img src="images/csgo_wp.jpg" alt="rover" />

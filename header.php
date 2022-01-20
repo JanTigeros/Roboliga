@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+require("db.php");
+?>
 <html>
 
 <head>

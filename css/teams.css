@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto, "Roboto";
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+
+/* Main */
+
+@media (min-width: 450px) {
+    .main {
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 50px;
+    }
+}
+
+
+/* Queastions */
+
+.question {
+    margin-top: 100px;
+}
+
+.question-header {
+    padding: 20px;
+    text-align: left;
+    background-color: black;
+    color: rgba(220, 220, 220, .7);
+}
+
+.question-header h1 {
+    font-size: 150%;
+    padding: 0%;
+    margin: 0;
+}
+
+.question-header p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-top: 1px black solid;
+    border-left: 1px black solid;
+    text-align: left;
+    outline: none;
+    font-size: medium;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.panel {
+    border-left: 1px black solid;
+    padding: 10px 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.team-member {
+    display: inline-block;
+    padding-left: 8px;
+    vertical-align: top;
+}
+
+.team-mentor {
+    display: inline-block;
+    padding-left: 20%;
+    vertical-align: top;
+}
+
+.team-school {
+    display: inline-block;
+    padding-left: 20%;
+    vertical-align: top;
+}
+
+ul {
+    padding: 15px;
+}
+
+#ph {
+    padding: 0px;
+    font-size: 120%;
+}

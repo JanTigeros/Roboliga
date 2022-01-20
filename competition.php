@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="row1-container">
-            <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='teams.html'">
+            <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='teams.php'">
                 <h2>Ekipe</h2>
                 <p>Tukaj si lahko ogledate vse prijavljenje ekipe :)</p>
                 <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
