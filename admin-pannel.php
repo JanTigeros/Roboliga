@@ -17,15 +17,37 @@ if ($_SESSION['loggedin'] == true) {
     <div id="page-container">
         <?php require('admin-header.php'); ?>
         <div id="page-content">
-            <div id="header">
-                <div id="heading">
-                    <p>Nadzorna plošča<p>
+            <div id="container">
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-teams.php'">
+                    <h2>Vse Ekipe</h2>
+                    <p>Tukaj si lahko ogledate vse prijavljenje ekipe</p>
+                    <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
                 </div>
-                <div id="logout">
-                    <a href="admin-logout.php"><p>Odjava</p></a>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-users.php'">
+                    <h2>Vsi Admini</h2>
+                    <p>Tukaj si lahko ogledate vse admine, ki imajo dostop do nadzorne plošče</p>
+                    <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
                 </div>
-            </div>
-            <div id="main">
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-register.php'">
+                    <h2>Dodaj Admina</h2>
+                    <p>Tukaj lahko dodate novega admina, ki lahko dostopa do nadzorne plošče</p>
+                    <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+                </div>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-register.php'">
+                    <h2>Vse Novice</h2>
+                    <p>Tukaj lahko dodate novega admina, ki lahko dostopa do nadzorne plošče</p>
+                    <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+                </div>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-register.php'">
+                    <h2>Dodaj Novico</h2>
+                    <p>Tukaj lahko dodate novega admina, ki lahko dostopa do nadzorne plošče</p>
+                    <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+                </div>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-register.php'">
+                    <h2>Dodaj Admina</h2>
+                    <p>Tukaj lahko dodate novega admina, ki lahko dostopa do nadzorne plošče</p>
+                    <img id="ico" src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -39,6 +61,3 @@ else {
 	exit();
 }
 ?>
-</body>
-
-</html>

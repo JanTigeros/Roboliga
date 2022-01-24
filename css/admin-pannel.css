@@ -32,7 +32,7 @@ body {
 }
 
 #page-container {
-    margin-left: 160px;
+    margin-left: 185px;
     padding: 0px 0px;
 }
 
@@ -78,6 +78,19 @@ body {
 
 /* *LEFT AND RIGHT AND MAIN */
 
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
 #left {
     float: left;
     width: 50%;
@@ -92,4 +105,83 @@ body {
 
 #page-content {
     margin-bottom: 80px;
+}
+
+
+/* *MAIN */
+
+#container {
+    text-align: center;
+    margin: auto;
+    height: 50vw;
+}
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;
+    background-color: white;
+}
+
+#ico {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+
+.red {
+    border-top: 3px solid var(--red);
+}
+
+.blue {
+    border-top: 3px solid var(--blue);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 50px;
+    }
+    .box {
+        width: 20%;
+        transition: 0.5s;
+    }
+    .box:hover {
+        transform: translateY(10px);
+        border-top: 10px solid var(--blue);
+    }
+    .header p {
+        width: 30%;
+    }
 }

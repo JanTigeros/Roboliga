@@ -14,7 +14,7 @@ session_start();
 <body>
     <div class="login-container">
         <div class="form-box">
-            <form id="login-form" action="register-proccess.php" method="post">
+            <form id="login-form" action="register-proccess.php" method="post" autocomplete="off">
                 <h1>Prijavi Ekipo</h1>
                 <div class="team-input">
                     <div class="input-container">

@@ -8,13 +8,13 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/admin-login-register.css">
     <title>Admin Prijava</title>
 </head>
 <body>
     <div class="login-container">
         <div class="form-box">
-            <form id="login-form" action="admin-proccess.php" method="post">
+            <form id="login-form" action="admin-proccess.php" method="post" autocomplete="off">
                 <h1>Ali ste Admin ?</h1>
                 <div class="team-input">
                     <div class="input-container">
@@ -22,7 +22,7 @@ session_start();
                         <label id="input">Uporabniško ime</label>
                     </div>
                     <div class="input-container">
-                        <input type="text" name="pass" required>
+                        <input type="password" name="pass" required>
                         <label id="input">Geslo</label>
                     </div>
                 </div>

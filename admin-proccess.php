@@ -17,7 +17,7 @@ if(isset($_POST['user']))
             header("Location: admin.php?error=Password_is_required");
             exit();
         }else{
-            //$pass = sha1($pass);
+            $pass = sha1($pass);
             echo $user;
             echo $pass."Kekec";
             $sql = "SELECT * FROM admins WHERE user='$user' AND pass='$pass'";
