@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto, "Roboto";
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0px;
+}
+
+
+/* *LEFT AND RIGHT AND MAIN */
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+#left {
+    float: left;
+    width: 50%;
+    padding: 50px;
+}
+
+#right {
+    padding: 50px;
+    float: right;
+    width: 50%;
+}
+
+#page-content {
+    margin-bottom: 80px;
+}
+
+
+/* *MAIN */
+
+#container {
+    text-align: center;
+    margin: auto;
+    height: 50vw;
+}
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;
+    background-color: white;
+}
+
+#ico {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+
+.red {
+    border-top: 3px solid var(--red);
+}
+
+.blue {
+    border-top: 3px solid var(--blue);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 50px;
+    }
+    .box {
+        width: 20%;
+        transition: 0.5s;
+    }
+    .box:hover {
+        transform: translateY(10px);
+        border-top: 10px solid var(--blue);
+    }
+    .header p {
+        width: 30%;
+    }
+}
+
+
+/* Main */
+
+@media (min-width: 450px) {
+    .main {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 450px) {
+    .main {
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-top: 50px;
+    }
+}
+
+
+/* Queastions */
+
+.question {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.question-header {
+    padding: 20px;
+    text-align: left;
+    background-color: black;
+    color: rgba(220, 220, 220, .7);
+}
+
+.question-header h1 {
+    font-size: 150%;
+    padding: 0%;
+    margin: 0;
+}
+
+.question-header p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.accordion {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-top: 1px black solid;
+    border-left: 1px black solid;
+    text-align: left;
+    outline: none;
+    font-size: medium;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.panel {
+    border-left: 1px black solid;
+    padding: 10px 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.team-member {
+    display: inline-block;
+    padding-left: 8px;
+    vertical-align: top;
+}
+
+.team-mentor {
+    display: inline-block;
+    padding-left: 20%;
+    vertical-align: top;
+}
+
+.team-school {
+    display: inline-block;
+    padding-left: 20%;
+    vertical-align: top;
+}
+
+.team-edit {
+    display: inline-block;
+    padding-left: 10%;
+    vertical-align: top;
+}
+
+.team-edit a {
+    text-decoration: none;
+    color: black;
+}
+
+.team-del {
+    display: inline-block;
+    padding-left: 10%;
+    vertical-align: top;
+}
+
+.team-del a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+#ph {
+    padding: 0px;
+    font-size: 120%;
+}

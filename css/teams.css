@@ -94,7 +94,9 @@ body {
 }
 
 ul {
-    padding: 15px;
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
 }
 
 #ph {

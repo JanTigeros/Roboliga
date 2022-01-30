@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require("db.php");
+require("../db.php");
 
 if (isset($_POST['user']) && isset($_POST['pass'])){
     $user = $conn -> real_escape_string($_POST['user']);
