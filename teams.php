@@ -11,6 +11,9 @@
 
 <body>
 <?php include 'header.php'; ?>
+<div id="header">
+        <h1>Novice</h1>
+    </div>
 <div class="main">
     <div class="question">
         <div class="question-header">

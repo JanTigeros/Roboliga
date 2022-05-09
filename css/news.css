@@ -10,6 +10,13 @@ body {
 
 /*Header*/
 
+@media (min-width: 1070px) {
+    #header {
+        text-align: center;
+        margin-top: 60px;
+    }
+}
+
 #header {
     text-align: center;
 }
@@ -40,15 +47,23 @@ body {
     }
 }
 
-.card {
-    text-align: left;
-    display: inline-block;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    width: 300px;
+@media (min-width: 333px) {
+    .card2 {
+        text-align: left;
+        display: inline-block;
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        width: 300px;
+    }
+}
+
+@media (max-width: 333px) {
+    .card2 {
+        margin: 0px;
+    }
 }
 
 .card-header img {

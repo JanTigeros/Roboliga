@@ -54,10 +54,10 @@ require("../db.php");
                                 <p>'.$row2['sname'].'</p>
                             </div>';}
                         echo '<div class="team-edit">
-                            <p id="ph"><a href="">Uredi</a></p>
+                            <p id="ph"><a id="blue" href="">Uredi</a></p>
                         </div>
                         <div class="team-del">
-                            <p id="ph"><a href="">Izbriši</a></p>
+                            <p id="ph"><a id="red" href="admin-delete-teams.php?a-id='.$row['id'].'">Odstrani</a></p>
                         </div>
                     </div>
                 </div>';}?>

@@ -85,12 +85,15 @@ session_start();
                 <div class="btn-div">
                     <button type="reset" id="btn-red" onclick="history.back()">Nazaj</button>
                     <button type="reset" id="btn-gray">Reset</button>
-                    <button type="submit" id="btn-subm">Prijavi</button>
+                    <button type="submit" id="btn-subm" onclick="notify()">Prijavi</button>
                 </div>
             </form>
         </div>
     </div>
     <script>
+        function notify() {
+            alert("Uspešno ste dodali ekipo");
+        }
         var acc = document.getElementsByClassName("accordion");
         var i;
 

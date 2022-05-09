@@ -6,16 +6,16 @@ if(isset($_POST['iekipe']))
 {
     echo 'Neki štima';
     if(isset($_POST['name2'])){
-        $_POST['name2'] = ' ';
+        $_POST[''] = ' ';
     }
     if(isset($_POST['name3'])){
-        $_POST['name3'] = ' ';
+        $_POST[''] = ' ';
     }
     if(isset($_POST['name4'])){
-        $_POST['name4'] = ' ';
+        $_POST[''] = ' ';
     }
     if(isset($_POST['name5'])){
-        $_POST['name5'] = ' ';
+        $_POST[''] = ' ';
     }
     if(isset($_POST['m2'])){
         $_POST[''] = ' ';
@@ -43,13 +43,15 @@ if(isset($_POST['iekipe']))
         $result3 = mysqli_fetch_array($query3);
         $s_id = $result3['id'];
 
+        echo $u3;
+
         // $pdo->prepare("INSERT INTO teams VALUES (NULL,?,?,?,?,?,?,?,?,?,?)")->execute($data);
  /*        INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) 
         VALUES( 'Ekipa', 1, 1, 'Jan Sajtl', '', '', '', '', 'Mirko Hočevar', ''); */
-        $sql = "INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) VALUES( '$team', $c_id, $s_id, '$u1', '$u2', '$u3', '$u4', '$u5', '$m1', '$m2')";
+        $sql = "INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) VALUES( '$team', $s_id, $c_id, '$u1', '$u2', '$u3', '$u4', '$u5', '$m1', '$m2')";
         $result4 = mysqli_query($conn, $sql);
            if ($result4) {
-           	 header("Location: index.php");
+           	 header("Location: teams.php");
 	         exit();
            }else {
 	           	header("register.php");

@@ -7,11 +7,6 @@ body {
     background-color: #eaeaea;
 }
 
-body {
-    font-family: "Lato", sans-serif;
-    margin: 0px;
-}
-
 
 /* *LEFT AND RIGHT AND MAIN */
 
@@ -153,8 +148,8 @@ h2 {
 .question-header {
     padding: 20px;
     text-align: left;
-    background-color: black;
-    color: rgba(220, 220, 220, .7);
+    background-color: transparent;
+    color: black;
 }
 
 .question-header h1 {
@@ -164,19 +159,18 @@ h2 {
 }
 
 .question-header p {
+    color: black;
     margin-top: 10px;
     margin-bottom: 0px;
 }
 
 .accordion {
-    background-color: white;
-    color: black;
+    background-color: transparent;
+    color: #0094d9;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
-    border-top: 1px black solid;
-    border-left: 1px black solid;
     text-align: left;
     outline: none;
     font-size: medium;
@@ -185,10 +179,10 @@ h2 {
 }
 
 .panel {
-    border-left: 1px black solid;
+    border-left: 1px #0094d9 solid;
     padding: 10px 18px;
     display: none;
-    background-color: white;
+    background-color: transparent;
     overflow: hidden;
 }
 
@@ -241,4 +235,12 @@ ul {
 #ph {
     padding: 0px;
     font-size: 120%;
+}
+
+#red {
+    color: red;
+}
+
+#blue {
+    color: blue;
 }

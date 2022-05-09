@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto, "Roboto" !important;
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+.table {
+    width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px;
+}
+
+@media (min-width: 1070px) {
+    .table {
+        width: 80% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 100px;
+    }
+}
+
+#del {
+    text-decoration: none;
+    color: red;
+}

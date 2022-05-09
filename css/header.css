@@ -6,9 +6,7 @@ body {
 
 /* Menu */
 
-.menu {
-    margin: 0px;
-    padding: 5px;
+.navbar {
     background-color: #0094d9;
     color: white;
 }
@@ -53,16 +51,16 @@ body {
 /* Phone Menu */
 
 @media (min-width: 1070px) {
-    nav {
+    .phone-nav {
         display: none;
     }
 }
 
 @media (max-width: 1070px) {
-    .menu {
+    .navbar {
         display: none;
     }
-    nav {
+    .phone-nav {
         background-color: #0094d9;
         height: 65px;
     }

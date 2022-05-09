@@ -59,6 +59,7 @@ body {
 
 #ico {
     float: right;
+    width: 20%;
 }
 
 @media (max-width: 450px) {

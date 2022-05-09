@@ -2,6 +2,7 @@
 <?php
 require("db.php");
 session_start();
+$n_id=$_GET['n_id'];
 ?>
 <html lang="sl">
 
@@ -14,43 +15,25 @@ session_start();
 </head>
 
 <body>
+<?php 
+        $sql = "SELECT * FROM news WHERE id=$n_id";
+        $result=mysqli_query($conn, $sql); 
+        while ($row= mysqli_fetch_array($result)){
+    echo'
     <div class="header">
-        <h2>Blog Name</h2>
+        <h2>'.$row['title'].'</h2>
     </div>
-
-    <div class="row">
-        <div class="leftcolumn">
+    <div class="main">
             <div class="card">
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Dec 7, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
+                <h2>'.$row['subtitle'].'</h2>
+                <h5>'.$row['date'].'</h5>
+                <div class="card-img">
+                    <img src="images/'.$row['img'].'">
+                </div>
+                <p>'.$row['text'].'</p>
+                <a href="news.php"><- Nazaj na novice</a>
             </div>
-            <div class="card">
-                <h2>TITLE HEADING</h2>
-                <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-            </div>
-        </div>
-        <div class="rightcolumn">
-            <div class="card">
-                <h2>About Me</h2>
-                <div class="fakeimg" style="height:100px;">Image</div>
-                <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-            </div>
-            <div class="card">
-                <h3>Popular Post</h3>
-                <div class="fakeimg">Image</div><br>
-                <div class="fakeimg">Image</div><br>
-                <div class="fakeimg">Image</div>
-            </div>
-            <div class="card">
-                <h3>Follow Me</h3>
-                <p>Some text..</p>
-            </div>
-        </div>
-    </div>
+    </div>';}?>
 
 </body>
 

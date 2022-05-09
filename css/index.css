@@ -58,7 +58,7 @@ h1 {
 }
 
 .accordion {
-    background-color: #eaeaea;
+    background-color: white;
     color: black;
     cursor: pointer;
     padding: 18px;
@@ -74,6 +74,6 @@ h1 {
 .panel {
     padding: 10px 18px;
     display: none;
-    background-color: #eaeaea;
+    background-color: white;
     overflow: hidden;
 }

@@ -22,11 +22,11 @@ session_start();
         <?php 
         $sql = "SELECT * FROM news";
         $result=mysqli_query($conn, $sql); 
-        while ($row= mysqli_fetch_array($result)){ ?>
-        <a href="news-post.php?p_name=$row['title']."><div class="card" style="cursor: pointer;" onclick="window.location='news-post.php?p_name='.$row['title'].'">
-        <?php
+        while ($row= mysqli_fetch_array($result)){
+        echo '<a href="news-post.php?n_id='.$row['id'].'">
+        <div class="card2" style="cursor: pointer;">';
             echo '<div class="card-header">
-            <img src="'.$row['img'].'" alt="rover" />
+            <img src="images/'.$row['img'].'" alt="rover" />
             </div>
             <div class="card-body">
             <span class="tag tag-teal">Technology</span>
@@ -43,114 +43,6 @@ session_start();
         </div></a>';
                         }
         ?>
-        <div class="card">
-            <div class="card-header">
-            <img src="images/csgo_wp.jpg" alt="rover" />
-            </div>
-            <div class="card-body">
-            <span class="tag tag-teal">Technology</span>
-                <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
-                </h4>
-                <p>
-                    An exploration into the truck's polarising design
-                </p>
-                <div class="user-info">
-                    <h5>July Dec</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-            <img src="images/csgo_wp.jpg" alt="rover" />
-            </div>
-            <div class="card-body">
-            <span class="tag tag-teal">Technology</span>
-                <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
-                </h4>
-                <p>
-                    An exploration into the truck's polarising design
-                </p>
-                <div class="user-info">
-                    <h5>July Dec</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-            <img src="images/csgo_wp.jpg" alt="rover" />
-            </div>
-            <div class="card-body">
-            <span class="tag tag-teal">Technology</span>
-                <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
-                </h4>
-                <p>
-                    An exploration into the truck's polarising design
-                </p>
-                <div class="user-info">
-                    <h5>July Dec</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-            <img src="images/csgo_wp.jpg" alt="rover" />
-            </div>
-            <div class="card-body">
-            <span class="tag tag-teal">Technology</span>
-                <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
-                </h4>
-                <p>
-                    An exploration into the truck's polarising design
-                </p>
-                <div class="user-info">
-                    <h5>July Dec</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-            <img src="images/csgo_wp.jpg" alt="rover" />
-            </div>
-            <div class="card-body">
-            <span class="tag tag-teal">Technology</span>
-                <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
-                </h4>
-                <p>
-                    An exploration into the truck's polarising design
-                </p>
-                <div class="user-info">
-                    <h5>July Dec</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header">
-            <img src="images/csgo_wp.jpg" alt="rover" />
-            </div>
-            <div class="card-body">
-            <span class="tag tag-teal">Technology</span>
-                <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
-                </h4>
-                <p>
-                    An exploration into the truck's polarising design
-                </p>
-                <div class="user-info">
-                    <h5>July Dec</h5>
-                </div>
-            </div>
-        </div>
     </main>
     <?php include "footer.php"; ?>
 

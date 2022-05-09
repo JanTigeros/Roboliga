@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: roboto, "Roboto";
+    width: 100%;
+    background-color: #0094d9;
+}
+
+
+/* Main */
+
+.login-container {
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-box {
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+form {
+    margin: auto;
+}
+
+#login-form h1 {
+    text-align: center;
+}
+
+#login-form p {
+    font-weight: bold;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-container label {
+    position: absolute;
+    top: -12px;
+    left: 0px;
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+}
+
+.input-container input {
+    border: 0;
+    border-bottom: 1px solid #555;
+    background: transparent;
+    width: 100%;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+    color: black;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #0094d9;
+}
+
+.input-container input {
+    top: -12px;
+    font-size: 16px;
+}
+
+.panel {
+    margin-top: 30px;
+}
+
+.team-input {
+    margin-top: 100px;
+}
+
+.name-input {
+    width: 300px;
+    margin-top: 50px;
+}
+
+.select-input {
+    width: 300px;
+    margin-top: 50px;
+}
+
+select {
+    width: 300px;
+    background-color: white;
+    font-size: 16px;
+    font-family: roboto, "Roboto";
+    padding: 5px;
+    border: solid 1px #555;
+}
+
+select:focus {
+    border: solid 1px #0094d9;
+}
+
+option {
+    background-color: white;
+    font-family: roboto, "Roboto";
+    color: #0094d9;
+    font-size: 16px;
+}
+
+option:hover {
+    background-color: #0094d9;
+    color: white;
+}
+
+.btn-div {
+    align-items: center;
+    margin-top: 30px;
+    vertical-align: bottom;
+}
+
+
+/* Btn submit */
+
+#btn-subm {
+    width: 32%;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    transition: 0.5s;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: solid 1px #0094d9;
+}
+
+#btn-subm:hover {
+    background-color: #0094d9;
+    color: white;
+}
+
+#btn-subm:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 11px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#btn-subm:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+
+/* Btn reset */
+
+#btn-gray {
+    width: 32%;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    transition: 0.5s;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: solid 1px gray;
+}
+
+#btn-gray:hover {
+    background-color: gray;
+    color: white;
+}
+
+#btn-gray:after {
+    content: '';
+    position: absolute;
+    opacity: 0;
+    top: 11px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#btn-gray:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+
+/* Btn back */
+
+#btn-red {
+    width: 32%;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    transition: 0.5s;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    border: solid 1px red;
+}
+
+#btn-red:hover {
+    background-color: red;
+    color: white;
+}
+
+#btn-red:after {
+    content: '«';
+    position: absolute;
+    opacity: 0;
+    top: 11px;
+    left: -20px;
+    transition: 0.5s;
+}
+
+#btn-red:hover:after {
+    opacity: 1;
+    left: 10px;
+}
