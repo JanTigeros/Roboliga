@@ -33,7 +33,7 @@ if ($_SESSION['loggedin'] == true) {
                         <label for="exampleFormControlTextarea1">Besedilo:</label>
                         <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
                     </div>
-                    <button type="submit" name="submit" class="btn btn-secondary mb-2">Post</button>
+                    <button type="submit" name="submit" class="btn btn-primary mb-2">Dodaj Novico</button>
                 </div>
                 <div id="right">
                     <div class="form-group">

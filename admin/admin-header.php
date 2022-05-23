@@ -16,6 +16,8 @@
             <a href="admin-register.php">Dodaj Admina</a>
             <a href="admin-news.php">Novice</a>
             <a href="admin-posts.php">Dodaj Novico</a>
+            <a href="admin-categories.php">Kategorije</a>
+            <a href="admin-categories-add.php">Dodaj kategorijo</a>
             <a href="../index.php">Back</a>
     </div>
     <div id="header">
@@ -33,6 +35,8 @@
                     <li><a href="admin-register.php">Dodaj Admina</a></li>
                     <li><a href="admin-news.php">Novice</a></li>
                     <li><a href="admin-posts.php">Dodaj Novico</a></li>
+                    <li><a href="admin-categories.php">Kategorije</a></li>
+                    <li><a href="admin-categories-add.php">Dodaj kategorijo</a></li>
                     <li><a href="../index.php">Back</a></li>
                 </ul>
             </div>

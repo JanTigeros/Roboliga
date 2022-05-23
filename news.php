@@ -29,7 +29,6 @@ session_start();
             <img src="images/'.$row['img'].'" alt="rover" />
             </div>
             <div class="card-body">
-            <span class="tag tag-teal">Technology</span>
                 <h4>
                     '.$row['title'].'
                 </h4>

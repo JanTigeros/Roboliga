@@ -8,7 +8,7 @@ body {
 
 .navbar {
     background-color: #0094d9;
-    color: white;
+    color: white !important;
 }
 
 #menu-list {
@@ -30,13 +30,17 @@ body {
     vertical-align: middle;
 }
 
-#menu-list li a {
+.nav-link {
     text-decoration: none;
-    color: white;
+    color: white !important;
 }
 
-#menu-list li a:hover {
-    color: lightgrey;
+.nav-link:hover {
+    color: lightgrey !important;
+}
+
+.navbar-brand {
+    color: white !important;
 }
 
 #logo {
