@@ -48,9 +48,14 @@ if ($_SESSION['loggedin'] == true) {
                     <p>Tukaj lahko dostopate do strani tekmovanja</p>
                     <img id="ico" src="../images/icons/adwords.png" alt="">
                 </div>
-                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-register.php'">
-                    <h2>Dodaj Admina</h2>
-                    <p>Tukaj lahko dodate novega admina, ki lahko dostopa do nadzorne plošče</p>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-categories.php'">
+                    <h2>Kategorije</h2>
+                    <p>Tukaj lahko dostopae do kategorij</p>
+                    <img id="ico" src="../images/icons/google.png" alt="">
+                </div>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-categories-add.php'">
+                    <h2>Dodaj Kategorijo</h2>
+                    <p>Tukaj lahko dodate noveo kategorijo</p>
                     <img id="ico" src="../images/icons/google.png" alt="">
                 </div>
             </div>

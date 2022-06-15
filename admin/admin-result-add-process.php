@@ -38,16 +38,20 @@ if (isset($_POST['ekipa']) && isset($_POST['stopnja']) && isset($_POST['sec'])){
 		}else {
             $sql3 = "SELECT * FROM results WHERE team_id = $team_id";
             $result3 = mysqli_query($conn, $sql3);
+            while ($row3= mysqli_fetch_array($result3)){
+                $t1 = $row3['time_1'];
+            }
             if(mysqli_num_rows($result3) > 0) {
                 echo "jojjojo";
-                $sql4 = "UPDATE results SET time_2 = $r, sum = $r WHERE team_id = $team_id;";
+                $sum = $t1 + $r;
+                $sql4 = "UPDATE results SET time_2 = $r, sum = $sum  WHERE team_id = $team_id;";
                 if ($conn->query($sql4) === TRUE) {
                     header("Location: admin-teams.php");
                     exit();
                   } else {
                   }
             }else {
-                $sql2 = "INSERT INTO results (time_1, team_id) VALUES('1000', '9')";
+                $sql2 = "INSERT INTO results (time_1, team_id) VALUES($r, $team_id)";
                 if (mysqli_query($conn, $sql2)) {
                     echo "kekec";
                     $message = "Uspešno ste dodali admina!";

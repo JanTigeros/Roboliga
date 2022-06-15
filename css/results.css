@@ -42,3 +42,15 @@ body {
     border-radius: 0%;
     background-color: #0094d9;
 }
+
+#first {
+    display: none;
+}
+
+#second {
+    display: none;
+}
+
+#third {
+    display: none;
+}

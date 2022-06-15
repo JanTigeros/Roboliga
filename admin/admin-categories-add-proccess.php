@@ -17,8 +17,9 @@ require("../db.php");
 
 $title = $conn -> real_escape_string($_POST['title']);
 $desc = $conn -> real_escape_string($_POST['desc']);
+$fun = ($_POST['fun']);
 
-$sql = "INSERT INTO `categories`(`title`, `desc`) VALUES ('$title','$desc');";
+$sql = "INSERT INTO `categories`(`title`, `desc`, `function`) VALUES ('$title','$desc','$fun');";
 $result = mysqli_query($conn, $sql);
 
 /* echo $title;
