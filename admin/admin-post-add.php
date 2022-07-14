@@ -1,5 +1,6 @@
 <?php 
 session_start();
+if ($_SESSION['loggedin'] == true) {
 require("../db.php");
 
 $title = filter_input(INPUT_POST, 'title');
@@ -31,4 +32,9 @@ if(isset($_POST["submit"])){
 }
 
 #header("Location: admin-news.php");
+}
+else {
+    header("Location: ../index.php");
+	exit();
+}
 ?>

@@ -11,7 +11,9 @@
             <a href="../index.php"><img src="../images/logo.png" height="50px" alt="Logo"></a>
             <a href="admin-pannel.php">Domov</a>
             <a href="admin-competition.php">Tekmovanje</a>
+            <a href="admin-results.php">Rezultati</a>
             <a href="admin-teams.php">Ekipe</a>
+            <a href="admin-schools.php">Šole</a>
             <a href="admin-users.php">Vsi Admini</a>
             <a href="admin-register.php">Dodaj Admina</a>
             <a href="admin-news.php">Novice</a>
@@ -30,7 +32,9 @@
                 <ul id="menu">
                     <li><a href="admin-pannel.php">Domov</a></li>
                     <li><a href="admin-competition.php">Tekmovanje</a></li>
+                    <li><a href="admin-results.php">Rezultati</a></li>
                     <li><a href="admin-teams.php">Ekipe</a></li>
+                    <li><a href="admin-schools.php">Šole</a></li>
                     <li><a href="admin-users.php">Vsi Admini</a></li>
                     <li><a href="admin-register.php">Dodaj Admina</a></li>
                     <li><a href="admin-news.php">Novice</a></li>

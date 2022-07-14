@@ -1,3 +1,7 @@
+<?php
+session_start();
+if ($_SESSION['loggedin'] == true) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,4 +46,9 @@ if ($result) {
 }
  */
 #header("Location: admin-news.php");
+}
+else {
+    header("Location: ../index.php");
+	exit();
+}
 ?>

@@ -26,6 +26,7 @@
                 <li class="list-inline-item"><a href="rules.php">Pravila</a></li>
                 <li class="list-inline-item"><a href="about.php">O Nas</a></li>
                 <li class="list-inline-item"><a href="competition.php">Tekmovanje</a></li>
+                <li class="list-inline-item"><a href="results.php">Rezultati</a></li>
             </ul>
             <p class="copyright">Jan Sajtl © 2022</p>
         </footer>

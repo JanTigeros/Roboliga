@@ -54,3 +54,33 @@ body {
 #third {
     display: none;
 }
+
+
+/* Admin results */
+
+#main-tab {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#red {
+    color: red;
+}
+
+@media (max-width: 650px) {
+    .monitor {
+        display: none;
+    }
+    .phone {
+        display: block;
+    }
+}
+
+@media (min-width: 650px) {
+    .monitor {
+        display: block;
+    }
+    .phone {
+        display: none;
+    }
+}

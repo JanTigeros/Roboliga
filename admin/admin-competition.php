@@ -1,3 +1,15 @@
+<?php
+session_start();
+if ($_SESSION['loggedin'] == true) {
+  $nnn = 0;
+  $nnn = $nnn + 1;
+  if ($nnn === 0){
+    header("Refresh:0.5");
+  }
+  else{
+    $nnn = 1;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,3 +58,10 @@ $Onlysec = $_COOKIE["Onlysec"];
 </div>
 </body>
 </html>
+<?php
+}
+else {
+  header("Location: ../index.php");
+exit();
+}
+?>

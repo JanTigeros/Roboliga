@@ -23,9 +23,19 @@ if ($_SESSION['loggedin'] == true) {
                     <p>Tukaj lahko dostopate do strani tekmovanja</p>
                     <img id="ico" src="../images/icons/google.png" alt="">
                 </div>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-results.php'">
+                    <h2>Rezultati</h2>
+                    <p>Tukaj lahko dostopate do strani Rezultati</p>
+                    <img id="ico" src="../images/icons/google.png" alt="">
+                </div>
                 <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-teams.php'">
                     <h2>Vse Ekipe</h2>
                     <p>Tukaj si lahko ogledate vse prijavljenje ekipe</p>
+                    <img id="ico" src="../images/icons/teams.png" alt="">
+                </div>
+                <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-schools.php'">
+                    <h2>Vse Šole</h2>
+                    <p>Tukaj si lahko ogledate vse dosedanje šole</p>
                     <img id="ico" src="../images/icons/teams.png" alt="">
                 </div>
                 <div class="box box-down cyan" style="cursor: pointer;" onclick="window.location='admin-users.php'">

@@ -1,5 +1,6 @@
 <?php 
-session_start(); 
+session_start();
+if ($_SESSION['loggedin'] == true) {
 require("../db.php");
 
 if (isset($_POST['ekipa']) && isset($_POST['stopnja']) && isset($_POST['sec'])){
@@ -70,4 +71,9 @@ if (isset($_POST['ekipa']) && isset($_POST['stopnja']) && isset($_POST['sec'])){
     // echo $team;
     // echo $stage;
     // echo $sec;
+}
+}
+else {
+    header("Location: ../index.php");
+	exit();
 }

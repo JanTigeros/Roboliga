@@ -1,5 +1,7 @@
 <?php
-require("../db.php");
+session_start();
+if ($_SESSION['loggedin'] == true) {
+    require("../db.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,3 +86,10 @@ require("../db.php");
 </body>
 
 </html>
+<?php
+}
+else {
+    header("Location: ../index.php");
+	exit();
+}
+?>

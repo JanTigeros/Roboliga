@@ -61,7 +61,7 @@ session_start();
                 <div class="select-input">
                     <?php
                     //$stmt2 = $pdo->query('SELECT * FROM schools');
-                    $sql2 = "SELECT * FROM schools";
+                    $sql2 = "SELECT * FROM schools ORDER BY sname ASC";
                     echo '<select name="sola">';
                     $result2=mysqli_query($conn, $sql2); 
                     while ($row2= mysqli_fetch_array($result2)){
@@ -72,14 +72,15 @@ session_start();
                     echo '</select>';
                     ?>
                 </div>
+                <div id="div-add"><a id="add" href="school-add.php"> Dodaj Šolo </a></div>
                 <div class="name-input">
                     <div class="input-container">
                         <input type="text" name="m1" required>
-                        <label id="input">Ime in Priimek Menotrja</label>
+                        <label id="input">Ime in Priimek Mentorja</label>
                     </div>
                     <div class="input-container">
                         <input type="text" name="m2">
-                        <label id="input">Ime in Priimek Menotrja 2</label>
+                        <label id="input">Ime in Priimek Mentorja 2</label>
                     </div>
                 </div>
                 <div class="btn-div">

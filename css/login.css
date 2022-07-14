@@ -228,3 +228,15 @@ option:hover {
     opacity: 1;
     left: 10px;
 }
+
+
+/* Linki */
+
+#div-add {
+    margin-top: 11px;
+}
+
+#add {
+    color: #0094d9;
+    text-decoration: none;
+}
