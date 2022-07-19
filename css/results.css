@@ -84,3 +84,16 @@ body {
         display: none;
     }
 }
+
+.t1 {
+    margin-bottom: 15px;
+}
+
+.tab-title {
+    width: 70%;
+    margin: auto;
+}
+
+.new-tab {
+    margin-top: 30px;
+}

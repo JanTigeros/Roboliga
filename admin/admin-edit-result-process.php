@@ -58,6 +58,8 @@ if ($_SESSION['loggedin'] == true) {
         }
     else {
         echo "kekec";
+        header("Location: admin-result.php?error=Nekaj si pozabil");
+        exit();
     }
 }
 else {

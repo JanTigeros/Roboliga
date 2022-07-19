@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
-if ($_SESSION['loggedin'] == true) {
-    require("../db.php");
+require("../db.php");
 ?>
 <html lang="sl">
 <head>
@@ -53,10 +52,3 @@ if ($_SESSION['loggedin'] == true) {
     </script>
 </body>
 </html>
-<?php
-}
-else {
-    header("Location: ../index.php");
-	exit();
-}
-?>

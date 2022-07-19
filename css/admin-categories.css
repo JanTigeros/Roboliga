@@ -14,12 +14,12 @@ body {
     margin-top: 10px;
 }
 
-.table a {
+.table #red {
     color: red;
     text-decoration: none;
 }
 
-.table a:hover {
+.table #red:hover {
     color: darkred;
     text-decoration: none;
 }

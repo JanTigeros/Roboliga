@@ -33,7 +33,7 @@ if ($_SESSION['loggedin'] == true) {
             echo'<tr>
                 <th scope="row">'.$row['id'].'</th>
                 <td>'.$row['user'].'</td>
-                <td><a href="admin-delete.php?a-id='.$row['id'].'">Odstrani admina</a></td>
+                <td><a id="red" href="admin-delete.php?a-id='.$row['id'].'">Odstrani admina</a></td>
                 </tr>';}
             ?>
         </tbody>

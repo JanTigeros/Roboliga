@@ -1,7 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['loggedin'] == true) {
-    require("../db.php");
+require("../db.php");
 
     if(isset($_POST['user']))
     {
@@ -52,8 +51,3 @@ if ($_SESSION['loggedin'] == true) {
         header("Location: admin.php");
         exit();
     }
-}
-else {
-    header("Location: ../index.php");
-	exit();
-}

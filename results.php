@@ -210,7 +210,16 @@ $res2 = 0;
 
 <div class="phone">
     <!-- 1. kategorija -->
-    <div>
+    <div class="new-tab">
+        <div class="tab-title">
+            <?php
+            $sql6 = "SELECT * FROM categories WHERE id=1";
+            $result6=mysqli_query($conn, $sql6); 
+            while ($row6 = mysqli_fetch_array($result6)){
+                echo '<h2>'.$row6['title'].'</h2>';
+            }
+            ?>
+        </div>
         <table class="table">
         <thead>
             <tr>
@@ -268,7 +277,16 @@ $res2 = 0;
     </div>
 
     <!-- 2. kategorija -->
-    <div>
+    <div class="new-tab">
+        <div class="tab-title">
+            <?php
+            $sql7 = "SELECT * FROM categories WHERE id=2";
+            $result7=mysqli_query($conn, $sql7); 
+            while ($row7 = mysqli_fetch_array($result7)){
+                echo '<h2>'.$row7['title'].'</h2>';
+            }
+            ?>
+        </div>
         <table class="table">
         <thead>
             <tr>
@@ -326,7 +344,16 @@ $res2 = 0;
     </div>
 
     <!-- 3. kategorija -->
-    <div>
+    <div class="new-tab">
+        <div class="tab-title">
+            <?php
+            $sql8 = "SELECT * FROM categories WHERE id=16";
+            $result8=mysqli_query($conn, $sql8); 
+            while ($row8 = mysqli_fetch_array($result8)){
+                echo '<h2>'.$row8['title'].'</h2>';
+            }
+            ?>
+        </div>
         <table class="table">
         <thead>
             <tr>
@@ -336,7 +363,7 @@ $res2 = 0;
             </tr>
         </thead>
             <?php
-            $sql = "SELECT * FROM teams t INNER JOIN results r ON t.id=r.team_id WHERE t.category_id = 3 ORDER BY r.sum ASC";
+            $sql = "SELECT * FROM teams t INNER JOIN results r ON t.id=r.team_id WHERE t.category_id = 16 ORDER BY r.sum ASC";
             $result=mysqli_query($conn, $sql); 
                 while ($row = mysqli_fetch_array($result)){
                     $res1 = $row['time_1'];

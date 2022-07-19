@@ -12,7 +12,7 @@
 <body>
 <?php include 'header.php'; ?>
 <div id="header">
-        <h1>Novice</h1>
+        <h1>Ekipe</h1>
     </div>
 <div class="main">
     <div class="question">
@@ -50,7 +50,9 @@
                 while ($row2= mysqli_fetch_array($result2)){
                 echo '<div class="team-school">
                         <p id="ph">Šola</p>
-                        <p>'.$row2['sname'].'</p>
+                        <ul>
+                            <li>'.$row2['sname'].'</li>
+                        </ul>
                     </div>
                 </div>
             </div>

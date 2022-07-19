@@ -20,9 +20,6 @@ if ($_SESSION['loggedin'] == true) {
         <table class="table">
         <thead>
             <tr>
-            <td scope="col"><button type="button" class="btn mr-md-2 mb-md-0 mb-2 btn-primary" onclick="window.location.href='admin-categories-add.php'">Dodaj Kategorijo</button></td>         
-            </tr>
-            <tr>
             <th scope="col">Kategorija</th>
             <th scope="col">Opis</th>
             <th scope="col"></th>
@@ -36,7 +33,7 @@ if ($_SESSION['loggedin'] == true) {
             echo'<tr>
                 <th scope="row">'.$row['title'].'</th>
                 <td>'.$row['desc'].'</td>
-                <td><a href="admin-delete-categories.php?a-id='.$row['id'].'">Odstrani</a></td>
+                <td><a href="admin-edit-categories.php?a-id='.$row['id'].'">Uredi</a></td>
                 </tr>';}
             ?>
         </tbody>

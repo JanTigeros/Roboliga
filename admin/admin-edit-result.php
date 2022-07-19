@@ -22,14 +22,14 @@ if ($_SESSION['loggedin'] == true) {
             <form id="login-form" action="admin-edit-result-process.php" method="post" autocomplete="off">
                 <h1>Uredi rezultat</h1>
                 <div class="select-input">
-                    <select name="result">
+                    <select name="result" required>
                         <option value="" selected="true" disabled="true" hidden>Izberi rezultat</option>
                         <option value="1">1. čas</option>
                         <option value="2">2. čas</option>
                     </select>
                 </div>
                 <div class="select-input">
-                    <select name="stopnja">
+                    <select name="stopnja" required>
                     <option value="0" selected="true" disabled="true" hidden>Črka</option>
                     <option value="0">Uspel</option>
                     <option value="1000">A</option>

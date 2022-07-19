@@ -15,7 +15,7 @@ require("../db.php");
 <body>
 <?php
 $Sec=$_POST['Onlysec'];
-echo $Sec;
+// echo $Sec;
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <div class="login-container">
@@ -26,7 +26,7 @@ echo $Sec;
                     <?php
                     //$stmt2 = $pdo->query('SELECT * FROM schools');
                     $sql2 = "SELECT * FROM teams";
-                    echo '<select name="ekipa">';
+                    echo '<select name="ekipa" required>';
                     $result2=mysqli_query($conn, $sql2); 
                     while ($row2= mysqli_fetch_array($result2)){
                     // while ($row2 = $stmt2->fetch()){
@@ -37,7 +37,7 @@ echo $Sec;
                     ?>
                 </div>
                 <div class="select-input">
-                    <select name="stopnja">
+                    <select name="stopnja" required>
                     <option value="0" selected="true" disabled="true" hidden>Črka</option>
                     <option value="0">Uspel</option>
                     <option value="1000">A</option>

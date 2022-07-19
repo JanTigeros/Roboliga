@@ -5,7 +5,7 @@ require("db.php");
 if(isset($_POST['iekipe']))
 {
     echo 'Neki štima';
-    if(isset($_POST['name2'])){
+    /* if(isset($_POST['name2'])){
         $_POST[''] = ' ';
     }
     if(isset($_POST['name3'])){
@@ -19,9 +19,10 @@ if(isset($_POST['iekipe']))
     }
     if(isset($_POST['m2'])){
         $_POST[''] = ' ';
-    }
+    } */
     if(isset($_POST['iekipe'],$_POST['name1'],$_POST['m1']) && !empty($_POST['iekipe']) && !empty($_POST['name1']) && !empty($_POST['m1']))
     {
+        echo 'Bo ko bo';
         $team = ($_POST['iekipe']);
         $u1 = $conn -> real_escape_string($_POST['name1']);
         $u2 = $conn -> real_escape_string($_POST['name2']);
@@ -39,17 +40,19 @@ if(isset($_POST['iekipe']))
         $c_id = $result2['id'];
 
         $sql3 = "SELECT id FROM schools WHERE sname = '$school'";
-        $query3 = mysqli_query($conn, $sql2);
+        $query3 = mysqli_query($conn, $sql3);
         $result3 = mysqli_fetch_array($query3);
         $s_id = $result3['id'];
 
         echo $u3;
+        echo $s_id;
+        echo $c_id;
 
         // $pdo->prepare("INSERT INTO teams VALUES (NULL,?,?,?,?,?,?,?,?,?,?)")->execute($data);
- /*        INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) 
+        /* INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) 
         VALUES( 'Ekipa', 1, 1, 'Jan Sajtl', '', '', '', '', 'Mirko Hočevar', ''); */
-        $sql = "INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) VALUES( '$team', $s_id, $c_id, '$u1', '$u2', '$u3', '$u4', '$u5', '$m1', '$m2')";
-        $result4 = mysqli_query($conn, $sql);
+        $sql4 = "INSERT INTO teams (t_name, school_id, category_id, u1, u2, u3, u4, u5, m1, m2) VALUES( '$team', $s_id, $c_id, '$u1', '$u2', '$u3', '$u4', '$u5', '$m1', '$m2');";
+        $result4 = mysqli_query($conn, $sql4);
            if ($result4) {
            	 header("Location: teams.php");
 	         exit();

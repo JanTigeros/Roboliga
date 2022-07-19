@@ -22,3 +22,13 @@ body {
         margin-top: 100px;
     }
 }
+
+#red {
+    color: red;
+    text-decoration: none;
+}
+
+#red:hover {
+    color: darkred;
+    text-decoration: none;
+}
